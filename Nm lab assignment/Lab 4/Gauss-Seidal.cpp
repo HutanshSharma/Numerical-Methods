@@ -10,7 +10,7 @@ double fx2(double x1){
     return (20-5.0*x1)/5.0;
 }
 
-void jacobi(vector<double>&initialguess,int iter,double tol){
+void seidal(vector<double>&initialguess,int iter,double tol){
     ofstream outputfile("Gauss-Seidal.txt");
     for(double i=0;i<iter;i++){
         pair<double,double>p1 = {initialguess[0],initialguess[1]};
@@ -26,5 +26,5 @@ void jacobi(vector<double>&initialguess,int iter,double tol){
 int main(){
     double tol = 1e-6;
     vector<double>initialguess={0,0};
-    jacobi(initialguess,100,tol);
+    seidal(initialguess,100,tol);
 }
