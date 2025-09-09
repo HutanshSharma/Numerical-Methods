@@ -2,6 +2,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+// L2 norm 
 double abs_forward_error(vector<double>calculated_ans, vector<double>real_ans, int size){
     double sum=0;
     for(int i=0;i<size;i++){
