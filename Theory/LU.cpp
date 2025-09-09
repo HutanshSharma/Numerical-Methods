@@ -16,7 +16,7 @@ vector<double> lu(vector<vector<double>>u,vector<double>b,int n){
     for(int i=0;i<n;i++){
         for(int j=i+1;j<n;j++){
             double factor = u[j][i]/u[i][i];
-            if(j>i) l[j][i]=factor;
+            l[j][i]=factor;
             for(int k=i;k<n;k++){
                 u[j][k] -= u[i][k]*factor; 
             }
