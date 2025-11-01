@@ -5,7 +5,7 @@ double f(double x){
     return sinf(x);
 }
 
-double mean(double x, double node_size){
+double area(double x, double node_size){
     return ((f(x-node_size)+f(x))/2.0)*node_size;
 }
 
@@ -18,7 +18,7 @@ int main(){
     double node_size = (upper_limit-lower_limit)/nodes;
 
     for(double i =node_size;i<=upper_limit;i+=node_size){
-        areas.push_back(mean(i,node_size));
+        areas.push_back(area(i,node_size));
     }
 
     double ans = 0;
